@@ -61,7 +61,7 @@ function RegisterScreen() {
             autoCorrect={false}
             icon="account"
             name="name"
-            placeholder="Name"
+            placeholder="Nombre"
           />
           <FormField
             autoCapitalize="none"
@@ -69,7 +69,7 @@ function RegisterScreen() {
             icon="email"
             keyboardType="email-address"
             name="email"
-            placeholder="Email"
+            placeholder="Correo"
             textContentType="emailAddress"
           />
           <FormField
@@ -77,11 +77,11 @@ function RegisterScreen() {
             autoCorrect={false}
             icon="lock"
             name="password"
-            placeholder="Password"
+            placeholder="Constraseña"
             secureTextEntry
             textContentType="password"
           />
-          <SubmitButton title="Register" />
+          <SubmitButton title="Enviar " />
         </Form>
       </Screen>
     </>

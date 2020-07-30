@@ -38,7 +38,7 @@ function LoginScreen(props) {
         validationSchema={validationSchema}
       >
         <ErrorMessage
-          error="Invalid email and/or password."
+          error="Correo o contraseña incorrectos"
           visible={loginFailed}
         />
         <FormField
@@ -47,7 +47,7 @@ function LoginScreen(props) {
           icon="email"
           keyboardType="email-address"
           name="email"
-          placeholder="Email"
+          placeholder="Correo"
           textContentType="emailAddress"
         />
         <FormField
@@ -55,11 +55,11 @@ function LoginScreen(props) {
           autoCorrect={false}
           icon="lock"
           name="password"
-          placeholder="Password"
+          placeholder="Contraseña"
           secureTextEntry
           textContentType="password"
         />
-        <SubmitButton title="Login" />
+        <SubmitButton title="Aceptar " />
       </Form>
     </Screen>
   );
