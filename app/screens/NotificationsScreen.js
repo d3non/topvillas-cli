@@ -11,7 +11,7 @@ import Screen from "../components/Screen";
 import AppText from "../components/Text";
 import useApi from "../hooks/useApi";
 
-function MainScreen({ navigation }) {
+function NotificationsScreen(props) {
   const getListingsApi = useApi(listingsApi.getListings);
 
   useEffect(() => {
@@ -36,7 +36,9 @@ function MainScreen({ navigation }) {
               title={item.title}
               subTitle={"$" + item.price}
               imageUrl={item.images[0].url}
-              onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
+              onPress={() =>
+                props.navigation.navigate("NotificationsDetailScreen", item)
+              }
               thumbnailUrl={item.images[0].thumbnailUrl}
             />
           )}
@@ -53,4 +55,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MainScreen;
+export default NotificationsScreen;

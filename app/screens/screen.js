@@ -1,12 +1,14 @@
 import React from "react";
 import {
-  View,
   Text,
+  View,
   StyleSheet,
   SafeAreaView,
   TouchableOpacity,
 } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
+
+import NotificationsScreen from "./NotificationsScreen";
 
 export default class Screen extends React.Component {
   render() {
@@ -14,7 +16,7 @@ export default class Screen extends React.Component {
       <View style={styles.container}>
         <SafeAreaView style={{ flex: 1 }}>
           <TouchableOpacity
-            style={{ alignItems: "flex-end", margin: 16 }}
+            style={{ alignItems: "flex-start", margin: 16 }}
             onPress={this.props.navigation.openDrawer}
           >
             <FontAwesome5 name="bars" size={24} color="#161924" />
@@ -22,7 +24,7 @@ export default class Screen extends React.Component {
           <View
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
           >
-            <Text style={styles.text}>{this.props.name} Screen</Text>
+            {this.props.screen}
           </View>
         </SafeAreaView>
       </View>
